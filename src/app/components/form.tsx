@@ -1,5 +1,5 @@
 "use client";
-import { Input } from 'postcss';
+
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 interface FormValues {
@@ -21,7 +21,7 @@ export default function App() {
   };
 
   return (
-    <div>
+    
 
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -77,13 +77,12 @@ export default function App() {
       </div>
       {errors.lastName && <span className='text-red-500 text-sm mt-1 '>{errors.lastName.message}</span>}
 
-      <div>
+      
         <input type="submit" className="flex-1 bg-black text-lime-400 py-2 px-6 rounded" disabled={isSubmitting} value ={isSubmitting ? "Submitting" :"submit"}/>
         
-        
-      </div>
+    
       
     </form>
-    </div>
+    
   );
 };
